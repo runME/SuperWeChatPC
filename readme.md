@@ -1,42 +1,56 @@
 
 # 概述
 
-微信电脑客户端多开工具，支持防消息撤销。
+`SuperWeChatPC`刚开始仅仅只是`PC`微信多开工具，后来慢慢增加了更多功能，感谢朋友们的支持。
 
-**v1.1.1**：
-1. WeChatResource目录是防撤销插件源码，暂时只支持固定版本(2.6.5.38，2.6.6.25），如有需要请联系我兼容或者自行修改。
-2. MultiWeChat是多开源码
-3. bin目录是已经编译好可直接使用的文件。
+为了方便更多开发者能够在`PC`微信做更多有意义的事情，现改变项目方向，提供两个针对不同人群的功能。
 
-使用方法：
+1. 普通用户依然可以直接使用原来的多开工具，直接下载可执行程序即可。~~[下载地址](https://github.com/anhkgg/SuperWeChatPC/archive/v1.1.3.zip)~~，详细使用方法请看[普通用户使用SuperWeChatPC](docs/normal.md)。(**请注意：** 由于微信更新，`2.6.8.52`以后，老版本`WeChat多开v0.0.1.exe`已经失效，请直接使用[sdk/SuperWechat.zip](https://github.com/anhkgg/SuperWeChatPC/raw/master/sdk/SuperWeChat.zip)，也可通过公众号获取。)
+2. 针对开发者，提供`WeChatSDK`，开放操作微信的各种接口，可以进行二次开发，具体使用方法请看[WeChatSDK开发指南](docs/sdk.md)。
 
-1. 双击运行WeChat多开(防撤销).exe即可。
-2. 如更新了WeChatResource.dll，请使用如下参数运行：`WeChat多开(防撤销).exe n`。
+`SuperWeChatPC`支持功能：
+1. 全版本无限多开
+2. 消息防撤销，有撤销提示（`>=2.6.7.40`）
+3. 语音消息备份（`>=2.6.6.28`）
+4. 消息发送接口（`>=2.6.6.44`）
+5. 接受消息接口，3种消息（`>=2.6.7.40`)
+6. 新增：<font color="red">**打破微信100M文件发送限制，支持任意大小文件发送（`>=2.6.8.65`）**</font>，使用方式见[更新日志](docs/update.md)。
 
-# 更新日志
+**`WeChatSDK`目前已经开放`C++`、`Python`、`Java`、`C#`接口。** 具体请看[WeChatSDK开发指南](docs/sdk.md)。
 
-**2018年11月30日(v1.1.1)**：
-1. 增加消息防撤销功能，暂时只支持固定版本(2.6.5.38，2.6.6.25），如有需要请联系我兼容或者自行修改。
-2. MultiWeChat增加更新安装防撤消插件和更新插件功能。
-3. [下载地址](https://github.com/anhkgg/multi_wechat_pc/releases/tag/v1.1.1)
-4. multi_wechat_pc更名为SuperWeChatPC
+更新详情请看[更新日志](docs/update.md)
 
-**v0.0.1**：
-1. 仅支持多开功能，[下载地址](https://github.com/anhkgg/multi_wechat_pc/releases/tag/v0.0.1)
+刚发布几天，发现在几个下载站出现了`SuperWeChatPC`的下载，特此加上编译好的文件`hash`信息，请下载后自行检查文件是否被修改。
 
-# 更多
+[hash信息](hash.txt)
+
+另外本项目仅在`github`发布，其他渠道下载的文件出现任何问题，与作者和本项目无关。
+
+# 技术内幕
 
 技术细节请参考文章：
 
-1. [https://mp.weixin.qq.com/s/bb7XMxop7e8rd7YqQ88nyA](https://mp.weixin.qq.com/s/bb7XMxop7e8rd7YqQ88nyA)
-2. [https://mp.weixin.qq.com/s/E7N6LzAH4p88Gu4f_qwGlg](https://mp.weixin.qq.com/s/E7N6LzAH4p88Gu4f_qwGlg)
+1. [https://mp.weixin.qq.com/s/bb7XMxop7e8rd7YqQ88nyA](https://mp.weixin.qq.com/s/bb7XMxop7e8rd7YqQ88nyA)（多开）
+2. [https://mp.weixin.qq.com/s/E7N6LzAH4p88Gu4f_qwGlg](https://mp.weixin.qq.com/s/E7N6LzAH4p88Gu4f_qwGlg)（消息防撤销）
+3. [https://mp.weixin.qq.com/s/h9d8aO79OvkpV9bknVT60A](https://mp.weixin.qq.com/s/h9d8aO79OvkpV9bknVT60A)（备份语音）
+4. [https://mp.weixin.qq.com/s/uUXB9AHtnhCsD7gAfFYRoA](https://mp.weixin.qq.com/s/uUXB9AHtnhCsD7gAfFYRoA)（消息发送接口）
 
-# TODO
+欢迎PR或提供意见建议。
 
-1. 消息备份
-2. 批量回复，发送、定时发送
-3. ....
+**感谢**
 
-# 支持作者
+1. [https://github.com/martona/mhook](https://github.com/martona/mhook)
+
+**交流**
+
+QQ group: [753894145](https://jq.qq.com/?_wv=1027&k=5ww6tlB)
+
+### 声明
+
+**<label style="color:red">本项目仅供技术研究，请勿用于任何商业用途，请勿用于非法用途，如有任何人凭此做何非法事情，均于作者无关，特此声明。</label>**
+
+<br/><br/>
+
+**开源不易，无数深夜的寒风需要你的点滴暖意。**
 
 ![img](pay.png)
